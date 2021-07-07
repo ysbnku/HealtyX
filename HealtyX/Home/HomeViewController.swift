@@ -32,7 +32,7 @@ class HomeViewController: UIViewController {
         homeTableView.register(UINib(nibName: collectionTableViewCellNibName, bundle: nil), forCellReuseIdentifier: collectionTableViewCellIdentifier)
         homeTableView.delegate = self
         homeTableView.dataSource = self
-       
+ 
     }
 
 }
@@ -56,7 +56,11 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        if indexPath.row == 0 {
+            return 300
+        }else {
+            return 120
+        }
     }
     
 }

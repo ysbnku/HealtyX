@@ -12,6 +12,7 @@ class CollectionTableViewCell: UITableViewCell {
     // MARK: - Constanst
     let collectionViewCellIdentifier = "HomeCollectionViewCell"
     let collectionCellNibName = "HomeCollectionViewCell"
+ 
     // MARK: - Properties
     @IBOutlet weak var collectionView: UICollectionView!
     override func awakeFromNib() {
@@ -20,6 +21,7 @@ class CollectionTableViewCell: UITableViewCell {
         collectionView.register(UINib(nibName: collectionCellNibName, bundle: nil), forCellWithReuseIdentifier: collectionViewCellIdentifier)
         collectionView.delegate = self
         collectionView.dataSource = self
+//        collectionView.layer.cornerRadius = 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,7 +31,7 @@ class CollectionTableViewCell: UITableViewCell {
     }
     
 }
-extension CollectionTableViewCell:UICollectionViewDelegate,UICollectionViewDataSource {
+extension CollectionTableViewCell:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
     }
@@ -38,6 +40,11 @@ extension CollectionTableViewCell:UICollectionViewDelegate,UICollectionViewDataS
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionViewCellIdentifier, for: indexPath) as! HomeCollectionViewCell
         return cell
     }
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: contentView.frame.width, height: contentView.frame.height)
+    }
     
 }

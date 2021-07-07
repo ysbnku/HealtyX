@@ -1,36 +1,21 @@
-{
-  "healtyFoods": [
+
+
+[
     {
-      "id": 1,
-      "title": "Su faydalımıdır Neden içmeliyiz",
-      "description": "Uyku sırasında susuz kalan vücudunuz için sabahları her şeyden önce içilmesi gereken bir numaralı içeceğimiz su. Sabah uyandığınızda metabolizmanızın sağlıklı bir şekilde yükselmesi için ve organlarınızın işlevsel bir şekilde çalışmaya devam etmesi için mutlaka bir bardak su için, birkaç dakika midenizdeki rahatlama ve serinliğin tadını çıkarın.",
-      "priority": 0,
-      "category": "Basic",
-      "time": "Sabah",
-      "n_title": [
-        "Su içmek faydalı",
-        "Su iç"
-      ],
-      "n_body": [
-        "Su içmek body",
-        "Su iç body"
-      ]
-    },
-    {
-      "id": 2,
-      "title": "Su faydalımıdır Neden içmeliyiz",
-      "description": "Uyku sırasında susuz kalan vücudunuz için sabahları her şeyden önce içilmesi gereken bir numaralı içeceğimiz su. Sabah uyandığınızda metabolizmanızın sağlıklı bir şekilde yükselmesi için ve organlarınızın işlevsel bir şekilde çalışmaya devam etmesi için mutlaka bir bardak su için, birkaç dakika midenizdeki rahatlama ve serinliğin tadını çıkarın.",
-      "priority": 0,
-      "category": "Basic",
-      "time": "Sabah",
-      "n_title": [
-        "Su içmek faydalı",
-        "Su iç"
-      ],
-      "n_body": [
-        "Su içmek body",
-        "Su iç body"
-      ]
+        "id": 2,
+        "description": "Uyku sırasında susuz kalan vücudunuz için sabahları her şeyden önce içilmesi gereken bir numaralı içeceğimiz su. Sabah uyandığınızda metabolizmanızın sağlıklı bir şekilde yükselmesi için ve organlarınızın işlevsel bir şekilde çalışmaya devam etmesi için mutlaka bir bardak su için, birkaç dakika midenizdeki rahatlama ve serinliğin tadını çıkarın.",
+        "priority": 0,
+        "category": "Basic",
+        "time": "Sabah",
+        "n_title": [
+          "Su içmek faydalı",
+          "Su iç"
+        ],
+        "n_body": [
+          "Su içmek body",
+          "Su iç body"
+        ]
+
     }
-  ]
-}
+ 
+]
