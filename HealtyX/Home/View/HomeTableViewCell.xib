@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="185" id="KGk-i7-Jjw" customClass="HomeTableViewCell" customModule="HealtyX" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="626" height="185"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="626" height="185"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zCN-CZ-QDR">
+                        <rect key="frame" x="15" y="15" width="120" height="155"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="medium" translatesAutoresizingMaskIntoConstraints="NO" id="71s-tk-GDF">
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="155"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="71s-tk-GDF" firstAttribute="top" secondItem="zCN-CZ-QDR" secondAttribute="top" id="QhA-lb-M89"/>
+                            <constraint firstItem="71s-tk-GDF" firstAttribute="leading" secondItem="zCN-CZ-QDR" secondAttribute="leading" id="Wco-sP-MtZ"/>
+                            <constraint firstAttribute="trailing" secondItem="71s-tk-GDF" secondAttribute="trailing" id="dl4-gE-7Jc"/>
+                            <constraint firstAttribute="bottom" secondItem="71s-tk-GDF" secondAttribute="bottom" id="j7b-fb-JAg"/>
+                            <constraint firstAttribute="width" constant="120" id="rl7-Tk-Kds"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Su içmek faydalı" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQP-y9-ytZ">
+                        <rect key="frame" x="160" y="15" width="451" height="22.5"/>
+                        <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbe-a3-KNS">
+                        <rect key="frame" x="160" y="41.5" width="431" height="128.5"/>
+                        <string key="text">Uyku sırasında susuz kalan vücudunuz için sabahları her şeyden önce içilmesi gereken bir numaralı içeceğimiz su. Sabah uyandığınızda metabolizmanızın sağlıklı bir şekilde yükselmesi için ve organlarınızın işlevsel bir şekilde çalışmaya devam etmesi için mutlaka bir bardak su için, birkaç dakika midenizdeki rahatlama ve serinliğin tadını çıkarın.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="zCN-CZ-QDR" secondAttribute="bottom" constant="15" id="7dW-lh-Tmc"/>
+                    <constraint firstItem="bbe-a3-KNS" firstAttribute="leading" secondItem="zCN-CZ-QDR" secondAttribute="trailing" constant="25" id="8zY-1o-SZH"/>
+                    <constraint firstItem="ZQP-y9-ytZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="O98-1i-Efj"/>
+                    <constraint firstItem="zCN-CZ-QDR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Wxi-Q8-iUF"/>
+                    <constraint firstItem="zCN-CZ-QDR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="XTN-zh-xjl"/>
+                    <constraint firstItem="bbe-a3-KNS" firstAttribute="top" secondItem="ZQP-y9-ytZ" secondAttribute="bottom" constant="4" id="ZTi-cf-uoj"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="bbe-a3-KNS" secondAttribute="trailing" constant="15" id="dgj-ZG-Wat"/>
+                    <constraint firstAttribute="bottom" secondItem="bbe-a3-KNS" secondAttribute="bottom" constant="15" id="tSj-LP-iyH"/>
+                    <constraint firstAttribute="trailing" secondItem="ZQP-y9-ytZ" secondAttribute="trailing" constant="15" id="tmN-jA-cQ4"/>
+                    <constraint firstItem="ZQP-y9-ytZ" firstAttribute="leading" secondItem="zCN-CZ-QDR" secondAttribute="trailing" constant="25" id="yKl-q4-Yzi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bgImage" destination="71s-tk-GDF" id="3yr-vd-JYi"/>
+                <outlet property="bgView" destination="zCN-CZ-QDR" id="Dm6-pw-zv6"/>
+                <outlet property="title" destination="bbe-a3-KNS" id="QVt-py-tHN"/>
+                <outlet property="titleView" destination="ZQP-y9-ytZ" id="18h-Zi-utm"/>
+            </connections>
+            <point key="canvasLocation" x="297.10144927536237" y="196.54017857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="medium" width="768" height="461"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
