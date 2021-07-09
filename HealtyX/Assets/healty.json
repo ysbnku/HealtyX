@@ -1,12 +1,51 @@
 
 
 [
+    
     {
-        "id": 2,
+        "id": 0,
+        "title": "Su nedir",
         "description": "Uyku sırasında susuz kalan vücudunuz için sabahları her şeyden önce içilmesi gereken bir numaralı içeceğimiz su. Sabah uyandığınızda metabolizmanızın sağlıklı bir şekilde yükselmesi için ve organlarınızın işlevsel bir şekilde çalışmaya devam etmesi için mutlaka bir bardak su için, birkaç dakika midenizdeki rahatlama ve serinliğin tadını çıkarın.",
         "priority": 0,
         "category": "Basic",
         "time": "Sabah",
+        "tag":"su",
+        "n_title": [
+          "Su içmek faydalı",
+          "Su iç"
+        ],
+        "n_body": [
+          "Su içmek body",
+          "Su iç body"
+        ]
+
+    },
+    {
+        "id": 1,
+        "title": "Su mu ne",
+        "description": "Uyku sırasında susuz kalan vücudunuz için sabahları her şeyden önce içilmesi gereken bir numaralı içeceğimiz su. Sabah uyandığınızda metabolizmanızın sağlıklı bir şekilde yükselmesi için ve organlarınızın işlevsel bir şekilde çalışmaya devam etmesi için mutlaka bir bardak su için, birkaç dakika midenizdeki rahatlama ve serinliğin tadını çıkarın.",
+        "priority": 0,
+        "category": "Basic",
+        "time": "Sabah",
+        "tag":"su",
+        "n_title": [
+          "Su içmek faydalı",
+          "Su iç"
+        ],
+        "n_body": [
+          "Su içmek body",
+          "Su iç body"
+        ]
+
+    },
+    {
+        "id": 2,
+        "title": "Su dududu",
+        "description": "Uyku sırasında susuz kalan vücudunuz için sabahları her şeyden önce içilmesi gereken bir numaralı içeceğimiz su. Sabah uyandığınızda metabolizmanızın sağlıklı bir şekilde yükselmesi için ve organlarınızın işlevsel bir şekilde çalışmaya devam etmesi için mutlaka bir bardak su için, birkaç dakika midenizdeki rahatlama ve serinliğin tadını çıkarın.",
+        "priority": 0,
+        "category": "Basic",
+        "time": "Sabah",
+        "tag":"su",
         "n_title": [
           "Su içmek faydalı",
           "Su iç"

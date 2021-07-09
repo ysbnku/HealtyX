@@ -12,7 +12,7 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var bgImage: UIImageView!
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var priorityLabel: UILabel!
-    @IBOutlet weak var titleView: UIView!
+    @IBOutlet weak var header: UILabel!
     @IBOutlet weak var title: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +26,12 @@ class HomeTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+    var healtyFoodCellViewModel : HealtyFoodCellViewModel? {
+        didSet{
+            header.text = healtyFoodCellViewModel?.header
+            bgImage.image = UIImage(named: healtyFoodCellViewModel!.bgImage)
+            title.text = healtyFoodCellViewModel?.title
+        }
+    }
     
 }

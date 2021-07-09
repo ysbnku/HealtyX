@@ -64,8 +64,8 @@
             <connections>
                 <outlet property="bgImage" destination="71s-tk-GDF" id="3yr-vd-JYi"/>
                 <outlet property="bgView" destination="zCN-CZ-QDR" id="Dm6-pw-zv6"/>
+                <outlet property="header" destination="ZQP-y9-ytZ" id="aDX-tp-uH4"/>
                 <outlet property="title" destination="bbe-a3-KNS" id="QVt-py-tHN"/>
-                <outlet property="titleView" destination="ZQP-y9-ytZ" id="18h-Zi-utm"/>
             </connections>
             <point key="canvasLocation" x="297.10144927536237" y="196.54017857142856"/>
         </tableViewCell>

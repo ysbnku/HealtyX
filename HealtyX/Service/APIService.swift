@@ -24,7 +24,6 @@ class APIService:APIServiceProtocol {
         do
         {
             let healtyfoods = try JSONDecoder().decode([Healty].self, from: jsonData)
-            print(healtyfoods.first?.n_body?[1])
             complete(true,healtyfoods,nil)
         }
         catch let error{
