@@ -32,7 +32,10 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         initializeView()
         initializeViewModel()
- 
+        let make = "Toyota"
+        let printCar = "\(make)" + " Car"
+        
+        let name = "Susan" + " " + "Smith"
     }
     
     func initializeViewModel(){
