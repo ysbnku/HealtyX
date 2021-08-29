@@ -32,10 +32,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         initializeView()
         initializeViewModel()
-        let make = "Toyota"
-        let printCar = "\(make)" + " Car"
-        
-        let name = "Susan" + " " + "Smith"
     }
     
     func initializeViewModel(){
@@ -65,6 +61,8 @@ class HomeViewController: UIViewController {
         homeTableView.register(UINib(nibName: profileTableViewCellNibName, bundle: nil), forCellReuseIdentifier: profileTableViewCellIdentifier)
         homeTableView.delegate = self
         homeTableView.dataSource = self
+        homeTableView.backgroundColor = .white
+
     }
 
 }
@@ -109,7 +107,9 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 || indexPath.section == 1 {
+        if indexPath.section == 0 {
+            return 180
+        }else if indexPath.section == 1 {
             return 300
         }else {
             return 120
