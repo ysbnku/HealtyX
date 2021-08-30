@@ -12,7 +12,7 @@ class CollectionTableViewCell: UITableViewCell {
     // MARK: - Constanst
     let collectionViewCellIdentifier = "HomeCollectionViewCell"
     let collectionCellNibName = "HomeCollectionViewCell"
- 
+    var healtyCategoryCellViewModel : [HealtyCategoryCellViewModel]?
     // MARK: - Properties
     @IBOutlet weak var collectionView: UICollectionView!
     override func awakeFromNib() {
@@ -21,7 +21,7 @@ class CollectionTableViewCell: UITableViewCell {
         collectionView.register(UINib(nibName: collectionCellNibName, bundle: nil), forCellWithReuseIdentifier: collectionViewCellIdentifier)
         collectionView.delegate = self
         collectionView.dataSource = self
-//        collectionView.layer.cornerRadius = 5
+        collectionView.reloadData()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -38,6 +38,7 @@ extension CollectionTableViewCell:UICollectionViewDelegate,UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionViewCellIdentifier, for: indexPath) as! HomeCollectionViewCell
+        cell.healtyCategoryCellViewModel = self.healtyCategoryCellViewModel?[indexPath.row]
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

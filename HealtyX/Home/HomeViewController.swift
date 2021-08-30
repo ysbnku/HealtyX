@@ -36,6 +36,7 @@ class HomeViewController: UIViewController {
     
     func initializeViewModel(){
         viewModel.initFetch()
+        viewModel.fetchCategories()
         viewModel.updateLoadingStatusClosure = { [weak self] () in
             let isLoading = self?.viewModel.isLoading ?? false
             if isLoading {
@@ -45,10 +46,10 @@ class HomeViewController: UIViewController {
                 print("iptal güncelleme")
             }
         }
-        print(viewModel.numberOfCells)
         viewModel.reloadTableViewClosure = { [weak self]() in
             DispatchQueue.main.sync {
                 self?.homeTableView.reloadData()
+                
             }
         }
         homeTableView.reloadData()
@@ -79,6 +80,7 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource {
         }
         if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: collectionTableViewCellIdentifier, for: indexPath) as! CollectionTableViewCell
+            cell.healtyCategoryCellViewModel = viewModel.cellCategoryViewModels
             return cell
         }
         if indexPath.section == 2 {

@@ -10,13 +10,23 @@ import UIKit
 
 class HealtyFoodViewModel {
     private var advices:[Healty] = [Healty]()
+    private var categories:[Category] = [Category]()
+
     var cellViewModels : [HealtyFoodCellViewModel] = [HealtyFoodCellViewModel](){
+        didSet {
+            self.reloadTableViewClosure?()
+        }
+    }
+    var cellCategoryViewModels : [HealtyCategoryCellViewModel] = [HealtyCategoryCellViewModel](){
         didSet {
             self.reloadTableViewClosure?()
         }
     }
     var numberOfCells:Int {
         return cellViewModels.count
+    }
+    var numberOfCategoryCells:Int {
+        return cellCategoryViewModels.count
     }
     
     var alertMessage:String? {
@@ -45,18 +55,37 @@ class HealtyFoodViewModel {
             if let error = error {
                 self?.alertMessage = error.rawValue
             }else {
-                self?.processFetchedPhoto(advices: advices)
+                self?.processFetchedAdvice(advices: advices)
+            }
+        }
+    }
+    func fetchCategories(){
+        self.isLoading = true
+        apiService.fetchHealtyCategories { [weak self](success, categories, error) in
+            self?.isLoading = false
+            if let error = error {
+                self?.alertMessage = error.rawValue
+            }else {
+                self?.processFetchedCategory(category: categories)
             }
         }
     }
     func createCellViewModel( advice: Healty ) -> HealtyFoodCellViewModel {
-
-        //Wrap a description
       
         return HealtyFoodCellViewModel(bgImage: "hard", header: advice.title!, title: advice.description!)
     }
+    func createCategoryCellViewModel( category: Category ) -> HealtyCategoryCellViewModel {
+      
+        return HealtyCategoryCellViewModel(id: category.id!,
+                                           header: category.header!,
+                                           difficulty: category.difficulty!,
+                                           notificationInfo: category.notificationInfo!,
+                                           title: category.title!,
+                                           category: category.category!,
+                                           image: category.image!)
+    }
     
-    private func processFetchedPhoto(advices:[Healty]){
+    private func processFetchedAdvice(advices:[Healty]){
         self.advices = advices // Cache
         var vms = [HealtyFoodCellViewModel]()
         for advice in advices {
@@ -64,12 +93,29 @@ class HealtyFoodViewModel {
         }
         self.cellViewModels = vms
     }
+    private func processFetchedCategory(category:[Category]){
+        self.categories = category // Cache
+        var vms = [HealtyCategoryCellViewModel]()
+        for category in categories {
+            vms.append(createCategoryCellViewModel(category: category))
+        }
+        self.cellCategoryViewModels = vms
+    }
 }
 
 struct HealtyFoodCellViewModel {
     let bgImage:String
     let header:String
     let title:String
+}
+struct HealtyCategoryCellViewModel {
+    let id : Int
+    let header : String
+    let difficulty : String
+    let notificationInfo : String
+    let title : String
+    let category:String
+    let image:String
 }
 
 

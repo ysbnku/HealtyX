@@ -136,7 +136,11 @@
                 <outlet property="bgImage" destination="gmQ-DC-tsZ" id="nHc-IG-4WK"/>
                 <outlet property="bgView" destination="ML8-Cr-yh4" id="rlJ-Sf-4rc"/>
                 <outlet property="bgtitleView" destination="eea-LQ-9PF" id="Pp0-Dr-PWa"/>
-                <outlet property="title" destination="2Yf-am-DwY" id="F2f-Up-a0e"/>
+                <outlet property="btnTitle" destination="2Yf-am-DwY" id="iD4-L9-5af"/>
+                <outlet property="difficulty" destination="o8p-NW-4NU" id="T4Q-jy-3UU"/>
+                <outlet property="header" destination="Uao-4c-oc1" id="cLS-39-JMU"/>
+                <outlet property="notificationInfo" destination="J6d-Qh-lYM" id="oR8-zP-vTM"/>
+                <outlet property="title" destination="Fz8-2d-i8F" id="RBF-9Z-rFa"/>
             </connections>
             <point key="canvasLocation" x="395.6521739130435" y="154.6875"/>
         </collectionViewCell>
