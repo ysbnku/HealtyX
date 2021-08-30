@@ -1,0 +1,33 @@
+
+
+[
+    
+    {
+        "id": 0,
+        "header": "Take Care of Mental Health",
+        "difficulty": "Kolay uygulanabilir",
+        "notificationInfo": "Günde 5 hatırlatma",
+        "title": "Zinde kal",
+        "category": "Basic",
+        "image":"programsDoc-1"
+       },
+    {
+        "id": 1,
+        "header": "Take Care of Body Health",
+        "difficulty": "ehh uygulanabilir",
+        "notificationInfo": "Günde 5 hatırlatma",
+        "title": "Zayıfla",
+        "category": "medium",
+        "image":"programsDoc-2"
+       },
+    {
+        "id": 2,
+        "header": "Take Care of Weight Health",
+        "difficulty": "Zor uygulanabilir",
+        "notificationInfo": "Günde 10 hatırlatma",
+        "title": "Extra sağlık",
+        "category": "hard",
+        "image":"programsDoc-3"
+       }
+
+]
