@@ -15,7 +15,7 @@ enum APIError:String,Error {
 
 protocol APIServiceProtocol {
     func fetchHealtyFoods(complete: @escaping (_ success:Bool,_ Healty:[Healty],_ error:APIError?) ->() )
-    func fetchHealtyCategories(complete: @escaping (_ success:Bool,_ Healty:[Category],_ error:APIError?) ->() )
+    func fetchHealtyCategories(complete: @escaping (_ success:Bool,_ Programs:[Programs],_ error:APIError?) ->() )
 
 }
 class APIService:APIServiceProtocol {
@@ -33,14 +33,14 @@ class APIService:APIServiceProtocol {
         }
     }
     
-    func fetchHealtyCategories(complete: @escaping (Bool, [Category], APIError?) -> ()) {
-        let path = Bundle.main.path(forResource: "category", ofType: "json")
+    func fetchHealtyCategories(complete: @escaping (Bool, [Programs], APIError?) -> ()) {
+        let path = Bundle.main.path(forResource: "Programs", ofType: "json")
         guard let filePath = path,let jsonData = try? Data(contentsOf: URL(fileURLWithPath: filePath))  else { return}
                 
         do
         {
-            let categories = try JSONDecoder().decode([Category].self, from: jsonData)
-            complete(true,categories,nil)
+            let programs = try JSONDecoder().decode([Programs].self, from: jsonData)
+            complete(true,programs,nil)
         }
         catch let error{
             print("Json Parse Error : \(error)")

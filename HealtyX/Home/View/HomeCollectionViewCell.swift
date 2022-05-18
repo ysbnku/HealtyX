@@ -19,25 +19,23 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet private var title: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        configureUI()
         
-   
+        prepareView()
+        
     }
     
-    func configureUI(){
+    private func prepareView(){
         bgView.layer.cornerRadius = 12
         bgView.clipsToBounds = true
         bgtitleView.layer.cornerRadius = 10
     }
-    var healtyCategoryCellViewModel : HealtyCategoryCellViewModel? {
-        didSet{
-            header.text = healtyCategoryCellViewModel?.header
-            bgImage.image = UIImage(named: healtyCategoryCellViewModel!.image)
-            title.text = healtyCategoryCellViewModel?.title
-            difficulty.text = healtyCategoryCellViewModel?.difficulty
-            notificationInfo.text = healtyCategoryCellViewModel?.notificationInfo
-        }
+    
+    public func configure(data: Programs) {
+        header.text = data.header
+        bgImage.image = UIImage(named: data.image!)
+        title.text = data.title
+        difficulty.text = data.difficulty
+        notificationInfo.text = data.notificationInfo
     }
     
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Category : Decodable{
+struct Programs : Decodable{
     var id : Int?
     var header : String?
     var difficulty : String?

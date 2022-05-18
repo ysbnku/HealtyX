@@ -12,22 +12,21 @@ class CollectionTableViewCell: UITableViewCell {
     // MARK: - Constanst
     let collectionViewCellIdentifier = "HomeCollectionViewCell"
     let collectionCellNibName = "HomeCollectionViewCell"
-    var healtyCategoryCellViewModel : [HealtyCategoryCellViewModel]?
+    var programs : [Programs]?
+    
     // MARK: - Properties
     @IBOutlet weak var collectionView: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+        prepareView()
+    }
+    
+    func prepareView() {
         collectionView.register(UINib(nibName: collectionCellNibName, bundle: nil), forCellWithReuseIdentifier: collectionViewCellIdentifier)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.reloadData()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }
@@ -38,7 +37,7 @@ extension CollectionTableViewCell:UICollectionViewDelegate,UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionViewCellIdentifier, for: indexPath) as! HomeCollectionViewCell
-        cell.healtyCategoryCellViewModel = self.healtyCategoryCellViewModel?[indexPath.row]
+        cell.configure(data: (programs?[indexPath.row])!)
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

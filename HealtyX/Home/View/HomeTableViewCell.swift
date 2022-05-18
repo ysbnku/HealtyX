@@ -16,22 +16,18 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        prepareView()
+    }
+
+    private func prepareView() {
         bgView.layer.cornerRadius = 5
         bgView.layer.masksToBounds = true
         selectionStyle = .none
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    var healtyFoodCellViewModel : HealtyFoodCellViewModel? {
-        didSet{
-            header.text = healtyFoodCellViewModel?.header
-            bgImage.image = UIImage(named: healtyFoodCellViewModel!.bgImage)
-            title.text = healtyFoodCellViewModel?.title
-        }
-    }
     
+    public func configure(data: Healty) {
+        header.text = data.title
+        bgImage.image = UIImage(named: "hard")
+        title.text = data.description
+    }
 }

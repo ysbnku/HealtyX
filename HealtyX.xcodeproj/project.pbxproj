@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		50150F7626DC5740006D4BDC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50150F7526DC5740006D4BDC /* Category.swift */; };
-		50150F7A26DC67BD006D4BDC /* category.json in Resources */ = {isa = PBXBuildFile; fileRef = 50150F7926DC67BD006D4BDC /* category.json */; };
+		50150F7A26DC67BD006D4BDC /* Programs.json in Resources */ = {isa = PBXBuildFile; fileRef = 50150F7926DC67BD006D4BDC /* Programs.json */; };
 		501DA86526B884860021A931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 501DA86326B884860021A931 /* LaunchScreen.storyboard */; };
 		501DA86E26B884B60021A931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501DA86D26B884B60021A931 /* AppDelegate.swift */; };
 		501DA87926B885340021A931 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 501DA87026B885340021A931 /* config.json */; };
@@ -17,10 +17,9 @@
 		501DA87D26B885340021A931 /* advice.json in Resources */ = {isa = PBXBuildFile; fileRef = 501DA87626B885340021A931 /* advice.json */; };
 		501DA87E26B885340021A931 /* healty.json in Resources */ = {isa = PBXBuildFile; fileRef = 501DA87726B885340021A931 /* healty.json */; };
 		501DA89826B8857C0021A931 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501DA88126B8857C0021A931 /* APIService.swift */; };
-		501DA89926B8857C0021A931 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501DA88426B8857C0021A931 /* HomeViewModel.swift */; };
-		501DA89A26B8857C0021A931 /* SectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501DA88526B8857C0021A931 /* SectionsViewModel.swift */; };
-		501DA89B26B8857C0021A931 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 501DA88626B8857C0021A931 /* HomeViewController.xib */; };
-		501DA89C26B8857C0021A931 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501DA88726B8857C0021A931 /* HomeViewController.swift */; };
+		501DA89926B8857C0021A931 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501DA88426B8857C0021A931 /* DashboardViewModel.swift */; };
+		501DA89B26B8857C0021A931 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 501DA88626B8857C0021A931 /* DashboardViewController.xib */; };
+		501DA89C26B8857C0021A931 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501DA88726B8857C0021A931 /* DashboardViewController.swift */; };
 		501DA89D26B8857C0021A931 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501DA88926B8857C0021A931 /* ProfileTableViewCell.swift */; };
 		501DA89E26B8857C0021A931 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501DA88A26B8857C0021A931 /* HomeTableViewCell.swift */; };
 		501DA89F26B8857C0021A931 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501DA88B26B8857C0021A931 /* HomeCollectionViewCell.swift */; };
@@ -33,11 +32,12 @@
 		501DA8A626B8857C0021A931 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501DA89426B8857C0021A931 /* DetailViewController.swift */; };
 		501DA8A726B8857C0021A931 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 501DA89526B8857C0021A931 /* DetailViewController.xib */; };
 		501DA8A826B8857C0021A931 /* Healty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501DA89726B8857C0021A931 /* Healty.swift */; };
+		BAEFC7BD283595BD00E0245D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEFC7BC283595BD00E0245D /* BaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		50150F7526DC5740006D4BDC /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		50150F7926DC67BD006D4BDC /* category.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = category.json; sourceTree = "<group>"; };
+		50150F7926DC67BD006D4BDC /* Programs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Programs.json; sourceTree = "<group>"; };
 		501DA85526B884840021A931 /* HealtyX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealtyX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		501DA86426B884860021A931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		501DA86626B884860021A931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,10 +48,9 @@
 		501DA87626B885340021A931 /* advice.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = advice.json; sourceTree = "<group>"; };
 		501DA87726B885340021A931 /* healty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = healty.json; sourceTree = "<group>"; };
 		501DA88126B8857C0021A931 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		501DA88426B8857C0021A931 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		501DA88526B8857C0021A931 /* SectionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsViewModel.swift; sourceTree = "<group>"; };
-		501DA88626B8857C0021A931 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		501DA88726B8857C0021A931 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		501DA88426B8857C0021A931 /* DashboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		501DA88626B8857C0021A931 /* DashboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
+		501DA88726B8857C0021A931 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		501DA88926B8857C0021A931 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		501DA88A26B8857C0021A931 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		501DA88B26B8857C0021A931 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -64,6 +63,7 @@
 		501DA89426B8857C0021A931 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		501DA89526B8857C0021A931 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		501DA89726B8857C0021A931 /* Healty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Healty.swift; sourceTree = "<group>"; };
+		BAEFC7BC283595BD00E0245D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +105,7 @@
 				501DA86F26B885340021A931 /* Assets */,
 				501DA87426B885340021A931 /* Main.storyboard */,
 				501DA86326B884860021A931 /* LaunchScreen.storyboard */,
+				BAEFC7BC283595BD00E0245D /* BaseViewModel.swift */,
 			);
 			path = HealtyX;
 			sourceTree = "<group>";
@@ -122,7 +123,7 @@
 			children = (
 				501DA86626B884860021A931 /* Info.plist */,
 				501DA87126B885340021A931 /* Assets.xcassets */,
-				50150F7926DC67BD006D4BDC /* category.json */,
+				50150F7926DC67BD006D4BDC /* Programs.json */,
 				501DA87026B885340021A931 /* config.json */,
 				501DA87626B885340021A931 /* advice.json */,
 				501DA87726B885340021A931 /* healty.json */,
@@ -142,8 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				501DA88326B8857C0021A931 /* ViewModel */,
-				501DA88626B8857C0021A931 /* HomeViewController.xib */,
-				501DA88726B8857C0021A931 /* HomeViewController.swift */,
+				501DA88626B8857C0021A931 /* DashboardViewController.xib */,
+				501DA88726B8857C0021A931 /* DashboardViewController.swift */,
 				501DA88826B8857C0021A931 /* View */,
 			);
 			path = Home;
@@ -152,8 +153,7 @@
 		501DA88326B8857C0021A931 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				501DA88426B8857C0021A931 /* HomeViewModel.swift */,
-				501DA88526B8857C0021A931 /* SectionsViewModel.swift */,
+				501DA88426B8857C0021A931 /* DashboardViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -262,10 +262,10 @@
 				501DA87926B885340021A931 /* config.json in Resources */,
 				501DA8A226B8857C0021A931 /* CollectionTableViewCell.xib in Resources */,
 				501DA87A26B885340021A931 /* Assets.xcassets in Resources */,
-				50150F7A26DC67BD006D4BDC /* category.json in Resources */,
+				50150F7A26DC67BD006D4BDC /* Programs.json in Resources */,
 				501DA87D26B885340021A931 /* advice.json in Resources */,
 				501DA8A726B8857C0021A931 /* DetailViewController.xib in Resources */,
-				501DA89B26B8857C0021A931 /* HomeViewController.xib in Resources */,
+				501DA89B26B8857C0021A931 /* DashboardViewController.xib in Resources */,
 				501DA8A326B8857C0021A931 /* HomeTableViewCell.xib in Resources */,
 				501DA8A426B8857C0021A931 /* HomeCollectionViewCell.xib in Resources */,
 				501DA8A126B8857C0021A931 /* ProfileTableViewCell.xib in Resources */,
@@ -280,14 +280,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				501DA8A626B8857C0021A931 /* DetailViewController.swift in Sources */,
-				501DA89C26B8857C0021A931 /* HomeViewController.swift in Sources */,
+				501DA89C26B8857C0021A931 /* DashboardViewController.swift in Sources */,
 				50150F7626DC5740006D4BDC /* Category.swift in Sources */,
+				BAEFC7BD283595BD00E0245D /* BaseViewModel.swift in Sources */,
 				501DA89826B8857C0021A931 /* APIService.swift in Sources */,
 				501DA8A526B8857C0021A931 /* NotificationManager.swift in Sources */,
 				501DA89E26B8857C0021A931 /* HomeTableViewCell.swift in Sources */,
-				501DA89926B8857C0021A931 /* HomeViewModel.swift in Sources */,
+				501DA89926B8857C0021A931 /* DashboardViewModel.swift in Sources */,
 				501DA89D26B8857C0021A931 /* ProfileTableViewCell.swift in Sources */,
-				501DA89A26B8857C0021A931 /* SectionsViewModel.swift in Sources */,
 				501DA86E26B884B60021A931 /* AppDelegate.swift in Sources */,
 				501DA8A026B8857C0021A931 /* CollectionTableViewCell.swift in Sources */,
 				501DA8A826B8857C0021A931 /* Healty.swift in Sources */,
