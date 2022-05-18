@@ -9,7 +9,7 @@
         "notificationInfo": "Günde 5 hatırlatma",
         "title": "Zinde kal",
         "category": "Basic",
-        "image":"programsDoc-1"
+        "image":"easy_program"
        },
     {
         "id": 1,
@@ -18,7 +18,7 @@
         "notificationInfo": "Günde 8 hatırlatma",
         "title": "ZayıflaZayıflaZayıflaZayıflaZayıflaZayıflaZayıfla",
         "category": "medium",
-        "image":"programsDoc-2"
+        "image":"mid_program"
        },
     {
         "id": 2,
@@ -27,7 +27,7 @@
         "notificationInfo": "Günde 12 hatırlatma",
         "title": "Extra sağlık",
         "category": "hard",
-        "image":"programsDoc-3"
+        "image":"hard_program"
        }
 
 ]
