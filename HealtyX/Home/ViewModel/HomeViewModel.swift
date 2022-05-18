@@ -70,10 +70,12 @@ class HealtyFoodViewModel {
             }
         }
     }
+    
     func createCellViewModel( advice: Healty ) -> HealtyFoodCellViewModel {
       
         return HealtyFoodCellViewModel(bgImage: "hard", header: advice.title!, title: advice.description!)
     }
+    
     func createCategoryCellViewModel( category: Category ) -> HealtyCategoryCellViewModel {
       
         return HealtyCategoryCellViewModel(id: category.id!,
@@ -93,6 +95,7 @@ class HealtyFoodViewModel {
         }
         self.cellViewModels = vms
     }
+    
     private func processFetchedCategory(category:[Category]){
         self.categories = category // Cache
         var vms = [HealtyCategoryCellViewModel]()
