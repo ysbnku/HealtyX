@@ -4,7 +4,7 @@
     
     {
         "id": 0,
-        "header": "Take Care of Mental Health",
+        "header": "Basit Seviye Program",
         "difficulty": "Kolay uygulanabilir",
         "notificationInfo": "Günde 5 hatırlatma",
         "title": "Zinde kal",
@@ -13,18 +13,18 @@
        },
     {
         "id": 1,
-        "header": "Take Care of Body Health",
-        "difficulty": "ehh uygulanabilir",
-        "notificationInfo": "Günde 5 hatırlatma",
-        "title": "Zayıfla",
+        "header": "Orta Seviye Program",
+        "difficulty": "Rahat uygulanabilir",
+        "notificationInfo": "Günde 8 hatırlatma",
+        "title": "ZayıflaZayıflaZayıflaZayıflaZayıflaZayıflaZayıfla",
         "category": "medium",
         "image":"programsDoc-2"
        },
     {
         "id": 2,
-        "header": "Take Care of Weight Health",
+        "header": "İleri Seviye Program",
         "difficulty": "Zor uygulanabilir",
-        "notificationInfo": "Günde 10 hatırlatma",
+        "notificationInfo": "Günde 12 hatırlatma",
         "title": "Extra sağlık",
         "category": "hard",
         "image":"programsDoc-3"
