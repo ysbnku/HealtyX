@@ -10,8 +10,8 @@ import UIKit
 class CollectionTableViewCell: UITableViewCell {
 
     // MARK: - Constanst
-    let collectionViewCellIdentifier = "HomeCollectionViewCell"
-    let collectionCellNibName = "HomeCollectionViewCell"
+    let collectionViewCellIdentifier = "ProgramsCollectionViewCell"
+    let collectionCellNibName = "ProgramsCollectionViewCell"
     var programs : [Programs]?
     
     // MARK: - Properties
@@ -36,7 +36,7 @@ extension CollectionTableViewCell:UICollectionViewDelegate,UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionViewCellIdentifier, for: indexPath) as! HomeCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionViewCellIdentifier, for: indexPath) as! ProgramsCollectionViewCell
         cell.configure(data: (programs?[indexPath.row])!)
         return cell
     }

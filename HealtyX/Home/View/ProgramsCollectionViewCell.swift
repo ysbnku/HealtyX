@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeCollectionViewCell: UICollectionViewCell {
+class ProgramsCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet private var bgImage: UIImageView!
     @IBOutlet private var bgtitleView: UIView!

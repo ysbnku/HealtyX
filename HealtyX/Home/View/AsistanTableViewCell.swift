@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileTableViewCell: UITableViewCell {
+class AsistanTableViewCell: UITableViewCell {
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var informationLabel: UILabel!

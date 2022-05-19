@@ -11,14 +11,14 @@ class DashboardViewController: UIViewController {
 
     
     // MARK: - Constants
-    let homeTableViewCellIdentifier = "HomeTableViewCell"
-    let homeTableViewCellNibName = "HomeTableViewCell"
+    let homeTableViewCellIdentifier = "AdvicesTableViewCell"
+    let homeTableViewCellNibName = "AdvicesTableViewCell"
 
     let collectionTableViewCellIdentifier = "CollectionTableViewCell"
     let collectionTableViewCellNibName = "CollectionTableViewCell"
 
-    let profileTableViewCellIdentifier = "ProfileTableViewCell"
-    let profileTableViewCellNibName = "ProfileTableViewCell"
+    let profileTableViewCellIdentifier = "AsistanTableViewCell"
+    let profileTableViewCellNibName = "AsistanTableViewCell"
 
     let viewModel = DashboardViewModel()
    
@@ -67,7 +67,7 @@ extension DashboardViewController:UITableViewDelegate,UITableViewDataSource {
         switch indexPath.section{
             
         case  0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: profileTableViewCellIdentifier,for: indexPath) as! ProfileTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: profileTableViewCellIdentifier,for: indexPath) as! AsistanTableViewCell
             return cell
             
         case 1:
