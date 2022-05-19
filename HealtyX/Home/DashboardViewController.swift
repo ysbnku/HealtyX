@@ -45,7 +45,6 @@ class DashboardViewController: UIViewController {
     func bindViewModel() {
         viewModel.initiliaze()
         viewModel.delegate = self
-        homeTableView.reloadData()
     }
     
     func prepareView() {
@@ -65,13 +64,13 @@ class DashboardViewController: UIViewController {
 extension DashboardViewController:UITableViewDelegate,UITableViewDataSource {
  
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath{
+        switch indexPath.section{
             
-        case  [0,0]:
+        case  0:
             let cell = tableView.dequeueReusableCell(withIdentifier: profileTableViewCellIdentifier,for: indexPath) as! ProfileTableViewCell
             return cell
             
-        case [1,0]:
+        case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: collectionTableViewCellIdentifier, for: indexPath) as! CollectionTableViewCell
             cell.programs = viewModel.programs
             return cell
@@ -93,25 +92,20 @@ extension DashboardViewController:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1
-        }else if section == 1 {
-            return 1
-        }else {
-            return 3
+        switch section {
+        case 0: return 1
+        case 1: return 1
+        default: return 3
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return 180
-        }else if indexPath.section == 1 {
-            return 300
-        }else {
-            return 120
+        switch indexPath.section {
+        case 0: return 180
+        case 1: return 300
+        default: return 120
         }
     }
-    
 }
 
 extension DashboardViewController: DataUpdateDelegate {
