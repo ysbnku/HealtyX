@@ -29,6 +29,8 @@
 		501DA8A626B8857C0021A931 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501DA89426B8857C0021A931 /* DetailViewController.swift */; };
 		501DA8A726B8857C0021A931 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 501DA89526B8857C0021A931 /* DetailViewController.xib */; };
 		501DA8A826B8857C0021A931 /* Healty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501DA89726B8857C0021A931 /* Healty.swift */; };
+		BA10C7C7285E893400A7CEF7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA10C7C6285E893400A7CEF7 /* BaseViewController.swift */; };
+		BA10C7C9285E89EB00A7CEF7 /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA10C7C8285E89EB00A7CEF7 /* BaseTableView.swift */; };
 		BAEFC7BD283595BD00E0245D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEFC7BC283595BD00E0245D /* BaseViewModel.swift */; };
 		BAEFC7BF2836A72000E0245D /* AdvicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEFC7BE2836A72000E0245D /* AdvicesTableViewCell.swift */; };
 		BAEFC7C12836A75F00E0245D /* AdvicesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAEFC7C02836A75F00E0245D /* AdvicesTableViewCell.xib */; };
@@ -60,6 +62,8 @@
 		501DA89426B8857C0021A931 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		501DA89526B8857C0021A931 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		501DA89726B8857C0021A931 /* Healty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Healty.swift; sourceTree = "<group>"; };
+		BA10C7C6285E893400A7CEF7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BA10C7C8285E89EB00A7CEF7 /* BaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableView.swift; sourceTree = "<group>"; };
 		BAEFC7BC283595BD00E0245D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		BAEFC7BE2836A72000E0245D /* AdvicesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvicesTableViewCell.swift; sourceTree = "<group>"; };
 		BAEFC7C02836A75F00E0245D /* AdvicesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdvicesTableViewCell.xib; sourceTree = "<group>"; };
@@ -97,15 +101,14 @@
 			isa = PBXGroup;
 			children = (
 				501DA86C26B884B60021A931 /* Application */,
-				501DA89326B8857C0021A931 /* DetailPopUp */,
-				501DA88226B8857C0021A931 /* Home */,
+				BA10C7CA285E91C000A7CEF7 /* Screens */,
 				501DA89126B8857C0021A931 /* Manager */,
 				501DA89626B8857C0021A931 /* Model */,
 				501DA88026B8857C0021A931 /* Service */,
 				501DA86F26B885340021A931 /* Assets */,
+				BA10C7C5285E890C00A7CEF7 /* BaseClasses */,
 				501DA87426B885340021A931 /* Main.storyboard */,
 				501DA86326B884860021A931 /* LaunchScreen.storyboard */,
-				BAEFC7BC283595BD00E0245D /* BaseViewModel.swift */,
 			);
 			path = HealtyX;
 			sourceTree = "<group>";
@@ -142,23 +145,15 @@
 		501DA88226B8857C0021A931 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				501DA88326B8857C0021A931 /* ViewModel */,
-				501DA88626B8857C0021A931 /* DashboardViewController.xib */,
 				501DA88726B8857C0021A931 /* DashboardViewController.swift */,
-				501DA88826B8857C0021A931 /* View */,
+				501DA88626B8857C0021A931 /* DashboardViewController.xib */,
+				501DA88426B8857C0021A931 /* DashboardViewModel.swift */,
+				501DA88826B8857C0021A931 /* Cells */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		501DA88326B8857C0021A931 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				501DA88426B8857C0021A931 /* DashboardViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		501DA88826B8857C0021A931 /* View */ = {
+		501DA88826B8857C0021A931 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				BAEFC7BE2836A72000E0245D /* AdvicesTableViewCell.swift */,
@@ -170,7 +165,7 @@
 				BAEFC7C22836A79A00E0245D /* ProgramsCollectionViewCell.swift */,
 				501DA89026B8857C0021A931 /* ProgramsCollectionViewCell.xib */,
 			);
-			path = View;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		501DA89126B8857C0021A931 /* Manager */ = {
@@ -181,13 +176,13 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		501DA89326B8857C0021A931 /* DetailPopUp */ = {
+		501DA89326B8857C0021A931 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
 				501DA89426B8857C0021A931 /* DetailViewController.swift */,
 				501DA89526B8857C0021A931 /* DetailViewController.xib */,
 			);
-			path = DetailPopUp;
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		501DA89626B8857C0021A931 /* Model */ = {
@@ -197,6 +192,25 @@
 				501DA89726B8857C0021A931 /* Healty.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BA10C7C5285E890C00A7CEF7 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				BAEFC7BC283595BD00E0245D /* BaseViewModel.swift */,
+				BA10C7C6285E893400A7CEF7 /* BaseViewController.swift */,
+				BA10C7C8285E89EB00A7CEF7 /* BaseTableView.swift */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		BA10C7CA285E91C000A7CEF7 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				501DA89326B8857C0021A931 /* Detail */,
+				501DA88226B8857C0021A931 /* Home */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,7 +297,9 @@
 				501DA89C26B8857C0021A931 /* DashboardViewController.swift in Sources */,
 				50150F7626DC5740006D4BDC /* Category.swift in Sources */,
 				BAEFC7BD283595BD00E0245D /* BaseViewModel.swift in Sources */,
+				BA10C7C9285E89EB00A7CEF7 /* BaseTableView.swift in Sources */,
 				501DA89826B8857C0021A931 /* APIService.swift in Sources */,
+				BA10C7C7285E893400A7CEF7 /* BaseViewController.swift in Sources */,
 				BAEFC7C32836A79A00E0245D /* ProgramsCollectionViewCell.swift in Sources */,
 				501DA8A526B8857C0021A931 /* NotificationManager.swift in Sources */,
 				BAEFC7BF2836A72000E0245D /* AdvicesTableViewCell.swift in Sources */,

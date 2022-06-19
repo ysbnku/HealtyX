@@ -23,14 +23,14 @@ class DashboardViewModel: BaseViewModel {
         fetchHealtyFoods()
     }
     
-    private func fetchHealtyFoods(){
+    private func fetchHealtyFoods() {
         apiService.fetchHealtyFoods { [weak self](success, advices, error) in
             self?.advices = advices
             success ? self?.delegate?.didLoadData() : print("\(String(describing: error?.rawValue))")
         }
     }
     
-    private func fetchCategories(){
+    private func fetchCategories() {
         apiService.fetchHealtyCategories { [weak self](success, programs, error) in
             self?.programs = programs
             success ? self?.delegate?.didLoadData() : print("\(String(describing: error?.rawValue))")
