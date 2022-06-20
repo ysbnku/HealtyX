@@ -11,7 +11,7 @@ class DashboardViewController: BaseViewController {
 
     
     // MARK: - Constants
-    let homeViewController = "DashboardViewController"
+    let dashboardViewController = "DashboardViewController"
     let advicesTableViewCellIdentifierAndNib = "AdvicesTableViewCell"
     let programsViewCellIdentifierAndNib = "CollectionTableViewCell"
     let asistanTableViewCellIdentifierAndNib = "AsistanTableViewCell"
@@ -27,7 +27,7 @@ class DashboardViewController: BaseViewController {
         super.viewDidLoad()
         prepareView()
         bindViewModel()
-        NotificationManager.shared.createNotificationDateByPrograms(.normal)
+        NotificationManager.shared.createNotificationByPrograms(.hard)
     }
     
     func bindViewModel() {
@@ -36,15 +36,13 @@ class DashboardViewController: BaseViewController {
     }
     
     func prepareView() {
-        loadViewControllerWithNibName(homeViewController)
+        loadViewControllerWithNibName(dashboardViewController)
         homeTableView.registerCellWithNibAndIdentifier(advicesTableViewCellIdentifierAndNib)
         homeTableView.registerCellWithNibAndIdentifier(programsViewCellIdentifierAndNib)
         homeTableView.registerCellWithNibAndIdentifier(asistanTableViewCellIdentifierAndNib)
         homeTableView.bindDelegateAndDataSource(self)
         homeTableView.backgroundColor = .white
-       // let storyboard = UIStoryboard(name: "Main", bundle: nil)
-       // let detailViewController = storyboard.instantiateViewController(withIdentifier: //"DetailViewController") as! DetailViewController
-       // navigationController?.pushViewController(detailViewController, animated: true)
+ 
         
     }
 
@@ -57,7 +55,7 @@ extension DashboardViewController:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section{
             
-        case  tableViewSections.asistan.rawValue:
+        case tableViewSections.asistan.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: asistanTableViewCellIdentifierAndNib,
                                                      for: indexPath) as! AsistanTableViewCell
             return cell
@@ -80,8 +78,18 @@ extension DashboardViewController:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("tıktık")
+        switch indexPath.section{
+            
+        case tableViewSections.asistan.rawValue: break
         
+        case tableViewSections.programs.rawValue: break
+   
+        case tableViewSections.advices.rawValue:goto()
+            
+            
+        default : print("[*****Dashboard Default Error]")
+          
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

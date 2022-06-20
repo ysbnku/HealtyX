@@ -13,4 +13,10 @@ public class BaseViewController: UIViewController {
     func loadViewControllerWithNibName(_ name: String) {
         Bundle.main.loadNibNamed(name, owner: self, options: nil)
     }
+    
+    func goto() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        navigationController?.pushViewController(detailViewController, animated: true)
+    }
 }

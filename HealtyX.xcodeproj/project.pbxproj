@@ -181,6 +181,7 @@
 			children = (
 				501DA89426B8857C0021A931 /* DetailViewController.swift */,
 				501DA89526B8857C0021A931 /* DetailViewController.xib */,
+				BA28075C2861086900FA34C8 /* Cells */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -211,6 +212,13 @@
 				501DA88226B8857C0021A931 /* Home */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		BA28075C2861086900FA34C8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
