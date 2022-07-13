@@ -21,6 +21,8 @@ class NotificationManager {
         let identifier = notification.identifier
         let request = UNNotificationRequest(identifier: identifier, content: notificationContent, trigger: dateTrigger)
         notificationCenter.add(request)
+        print("***\(notification) notification created")
+
     }
     
     func createNotificationByPrograms(_ program:NotificationPrograms) {
@@ -35,57 +37,81 @@ class NotificationManager {
         
         switch program {
         case .easy:
-            notificationList?.append(prepareNotification(.easy))
-            notificationList?.append(prepareNotification(.easy))
-            notificationList?.append(prepareNotification(.easy))
+            notificationList?.append(prepareNotification(.easy, .morning))
+            notificationList?.append(prepareNotification(.easy, .noon))
+            notificationList?.append(prepareNotification(.easy, .afterNoon))
+            notificationList?.append(prepareNotification(.easy, .evening))
+            notificationList?.append(prepareNotification(.easy, .night))
 
-           
         case .normal:
-            notificationList?.append(prepareNotification(.normal))
-            notificationList?.append(prepareNotification(.normal))
-            notificationList?.append(prepareNotification(.normal))
-
+            notificationList?.append(prepareNotification(.normal, .morning))
+            notificationList?.append(prepareNotification(.normal, .noon))
+            notificationList?.append(prepareNotification(.normal, .afterNoon))
+            notificationList?.append(prepareNotification(.normal, .evening))
+            notificationList?.append(prepareNotification(.normal, .night))
 
         case .hard:
-            notificationList?.append(prepareNotification(.hard))
-            notificationList?.append(prepareNotification(.hard))
-            notificationList?.append(prepareNotification(.hard))
+            notificationList?.append(prepareNotification(.hard, .morning))
+            notificationList?.append(prepareNotification(.hard, .noon))
+            notificationList?.append(prepareNotification(.hard, .afterNoon))
+            notificationList?.append(prepareNotification(.hard, .evening))
+            notificationList?.append(prepareNotification(.hard, .night))
+
 
         }
         
         return notificationList ?? [Notification]()
     }
     
-    private func getNotificationDate() -> DateComponents {
+    private func getNotificationDate(time: NotificationTime) -> DateComponents {
+        let randomMinute = Int.random(in: 0..<60)
+        var notificationHour: Int
+        switch time {
+        case .morning:
+            notificationHour = 8
+        case .noon:
+            notificationHour = 11
+        case .afterNoon:
+            notificationHour = 14
+        case .evening:
+            notificationHour = 17
+        case .night:
+            notificationHour = 20
+        }
         var dateComponents = DateComponents()
         dateComponents.timeZone = NSTimeZone.system
-        dateComponents.hour = 10
-        dateComponents.minute = 51
+        dateComponents.hour = notificationHour
+        dateComponents.minute = randomMinute
         
         return dateComponents
     }
     
-    private func prepareNotification(_ programs: NotificationPrograms) -> Notification {
+    private func prepareNotification(_ programs: NotificationPrograms, _ time: NotificationTime) -> Notification {
         let nf: Notification!
         switch programs {
         case .easy:
-            nf = Notification(title: "Easy Title",
-                                  subtitle: "Easy Title",
-                                  body: "Easy Title",
-                                  identifier: "Easy Title",
-                                  nfDate: getNotificationDate())
+            nf = Notification(
+                title: "Easy Title",
+                subtitle: "Easy Title",
+                body: "Easy Title",
+                identifier: "easy",
+                nfDate: getNotificationDate(time: time))
+            
         case .normal:
-            nf = Notification(title: "Normal Title",
-                                  subtitle: "Normal Title",
-                                  body: "Normal Title",
-                                  identifier: "Normal Title",
-                                  nfDate: getNotificationDate())
+            nf = Notification(
+                title: "Normal Title",
+                subtitle: "Normal Title",
+                body: "Normal Title",
+                identifier: "normal",
+                nfDate: getNotificationDate(time: time))
+            
         case .hard:
-            nf = Notification(title: "Hard Title",
-                                  subtitle: "Hard Title",
-                                  body: "Hard Title",
-                                  identifier: "Hard Title",
-                                  nfDate: getNotificationDate())
+            nf = Notification(
+                title: "Hard Title",
+                subtitle: "Hard Title",
+                body: "Hard Title",
+                identifier: "hard",
+                nfDate: getNotificationDate(time: time))
         }
   
         return nf
@@ -93,6 +119,7 @@ class NotificationManager {
     
     func removeNotifications(identifier: String) {
         UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: [identifier])
+        print("***\(identifier) notifications removed")
     }
     
     func permissionRequestForNotification() {
@@ -103,10 +130,18 @@ class NotificationManager {
     
 }
 
-enum NotificationPrograms {
-    case easy
+enum NotificationPrograms: Int {
+    case easy = 0
     case normal
     case hard
+}
+
+enum NotificationTime: Int {
+    case morning
+    case noon
+    case afterNoon
+    case evening
+    case night
 }
 
 struct Notification {

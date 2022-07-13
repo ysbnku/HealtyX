@@ -27,7 +27,6 @@ class DashboardViewController: BaseViewController {
         super.viewDidLoad()
         prepareView()
         bindViewModel()
-        NotificationManager.shared.createNotificationByPrograms(.hard)
     }
     
     func bindViewModel() {
@@ -42,7 +41,6 @@ class DashboardViewController: BaseViewController {
         homeTableView.registerCellWithNibAndIdentifier(asistanTableViewCellIdentifierAndNib)
         homeTableView.bindDelegateAndDataSource(self)
         homeTableView.backgroundColor = .white
- 
         
     }
 
