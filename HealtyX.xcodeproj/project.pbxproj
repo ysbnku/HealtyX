@@ -31,6 +31,7 @@
 		501DA8A826B8857C0021A931 /* Healty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501DA89726B8857C0021A931 /* Healty.swift */; };
 		BA10C7C7285E893400A7CEF7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA10C7C6285E893400A7CEF7 /* BaseViewController.swift */; };
 		BA10C7C9285E89EB00A7CEF7 /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA10C7C8285E89EB00A7CEF7 /* BaseTableView.swift */; };
+		BA5C10CD287067CD00E14086 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5C10CC287067CD00E14086 /* UIColor+.swift */; };
 		BAEFC7BD283595BD00E0245D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEFC7BC283595BD00E0245D /* BaseViewModel.swift */; };
 		BAEFC7BF2836A72000E0245D /* AdvicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEFC7BE2836A72000E0245D /* AdvicesTableViewCell.swift */; };
 		BAEFC7C12836A75F00E0245D /* AdvicesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAEFC7C02836A75F00E0245D /* AdvicesTableViewCell.xib */; };
@@ -64,6 +65,7 @@
 		501DA89726B8857C0021A931 /* Healty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Healty.swift; sourceTree = "<group>"; };
 		BA10C7C6285E893400A7CEF7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BA10C7C8285E89EB00A7CEF7 /* BaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableView.swift; sourceTree = "<group>"; };
+		BA5C10CC287067CD00E14086 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		BAEFC7BC283595BD00E0245D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		BAEFC7BE2836A72000E0245D /* AdvicesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvicesTableViewCell.swift; sourceTree = "<group>"; };
 		BAEFC7C02836A75F00E0245D /* AdvicesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdvicesTableViewCell.xib; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				501DA89626B8857C0021A931 /* Model */,
 				501DA88026B8857C0021A931 /* Service */,
 				501DA86F26B885340021A931 /* Assets */,
+				BA5C10CB287067B800E14086 /* Extensions */,
 				BA10C7C5285E890C00A7CEF7 /* BaseClasses */,
 				501DA87426B885340021A931 /* Main.storyboard */,
 				501DA86326B884860021A931 /* LaunchScreen.storyboard */,
@@ -221,6 +224,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		BA5C10CB287067B800E14086 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BA5C10CC287067CD00E14086 /* UIColor+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -302,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				501DA8A626B8857C0021A931 /* DetailViewController.swift in Sources */,
+				BA5C10CD287067CD00E14086 /* UIColor+.swift in Sources */,
 				501DA89C26B8857C0021A931 /* DashboardViewController.swift in Sources */,
 				50150F7626DC5740006D4BDC /* Category.swift in Sources */,
 				BAEFC7BD283595BD00E0245D /* BaseViewModel.swift in Sources */,
