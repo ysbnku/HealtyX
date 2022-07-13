@@ -11,12 +11,18 @@ class ProgramsCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet private var bgImage: UIImageView!
     @IBOutlet private var bgtitleView: UIView!
-    @IBOutlet private var btnTitle: UILabel!
     @IBOutlet private var bgView: UIView!
     @IBOutlet private var header: UILabel!
     @IBOutlet private var difficulty: UILabel!
     @IBOutlet private var notificationInfo: UILabel!
     @IBOutlet private var title: UILabel!
+    @IBOutlet weak var joinLabel: UILabel!
+    
+    public var isSelectedCell = true {
+        didSet {
+            onSelectedCell()
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -24,11 +30,15 @@ class ProgramsCollectionViewCell: UICollectionViewCell {
         
     }
     
+    private func onSelectedCell() {
+        isSelectedCell ? (joinLabel.text = "Programa Katıl") : (joinLabel.text = "Programa Katılındı")
+    }
     private func prepareView(){
         bgView.layer.cornerRadius = 12
         bgView.clipsToBounds = true
         bgtitleView.layer.cornerRadius = 10
     }
+    
     
     public func configure(data: Programs) {
         header.text = data.header

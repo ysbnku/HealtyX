@@ -29,6 +29,20 @@ class CollectionTableViewCell: UITableViewCell {
         collectionView.reloadData()
     }
     
+    private func onSelectedProgram(program: NotificationPrograms, indexPath: IndexPath) {
+        let selectedCell = collectionView.cellForItem(at: indexPath) as! ProgramsCollectionViewCell
+        if selectedCell.isSelectedCell {
+            selectedCell.isSelectedCell = false
+            NotificationManager.shared.createNotificationByPrograms(program)
+
+        }else {
+            selectedCell.isSelectedCell = true
+            NotificationManager.shared.removeNotifications(identifier: "easy") // Delete control will be dynamic.
+
+        }
+        
+    }
+    
 }
 extension CollectionTableViewCell:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -47,4 +61,14 @@ extension CollectionTableViewCell:UICollectionViewDelegate,UICollectionViewDataS
         return CGSize(width: contentView.frame.width, height: contentView.frame.height)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch NotificationPrograms(rawValue: indexPath.row) {
+        case .easy: onSelectedProgram(program: .easy, indexPath: indexPath)
+        case .normal: onSelectedProgram(program: .normal, indexPath: indexPath)
+        case .hard: onSelectedProgram(program: .hard, indexPath: indexPath)
+        case .none: break
+        }
+    }
+    
 }
+
