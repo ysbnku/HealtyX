@@ -16,6 +16,6 @@ struct Healty : Decodable{
     var category : String?
     var time : String?
     var tag:String?
-    var n_title : [String]?
-    var n_body : [String]?
+    var n_title : String?
+    var n_body : String?
 }

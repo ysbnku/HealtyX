@@ -1,77 +1,55 @@
-
-
 [
     
     {
         "id": 0,
-        "title": "Su nedir",
+        "title": "Su Neden İçmeliyiz ? ",
         "description": "Uyku sırasında susuz kalan vücudunuz için sabahları her şeyden önce içilmesi gereken bir numaralı içeceğimiz su. Sabah uyandığınızda metabolizmanızın sağlıklı bir şekilde yükselmesi için ve organlarınızın işlevsel bir şekilde çalışmaya devam etmesi için mutlaka bir bardak su için, birkaç dakika midenizdeki rahatlama ve serinliğin tadını çıkarın.",
         "priority": 0,
         "category": "Basic",
-        "time": "Sabah",
-        "tag":"su",
-        "n_title": [
-          "Su içmek faydalı",
-          "Su iç"
-        ],
-        "n_body": [
-          "Su içmek body",
-          "Su iç body"
-        ]
+        "time": "morning",
+        "image": "Sabah",
+        "tag": "su",
+        "n_title": "Günaydın bir tavsiyem var 👩🏻‍⚕️",
+        "n_body": "Uyanınca ilk su içmelisin. Detaylı bilgi için tıkla... "
 
     },
     {
         "id": 1,
-        "title": "Su mu ne",
-        "description": "Uyku sırasında susuz kalan vücudunuz için sabahları her şeyden önce içilmesi gereken bir numaralı içeceğimiz su. Sabah uyandığınızda metabolizmanızın sağlıklı bir şekilde yükselmesi için ve organlarınızın işlevsel bir şekilde çalışmaya devam etmesi için mutlaka bir bardak su için, birkaç dakika midenizdeki rahatlama ve serinliğin tadını çıkarın.",
+        "title": "Elma bağışıklık sisteminizi güçlendiriyor",
+        "description": "Bu sonbahar meyvesi, elmalı tarta lezzet vermekten çok daha fazlasını yapıyor. Önemli miktarda C vitaminiyle kış aylarında bağışıklık sisteminizi desteklemek için harika bir besin.",
         "priority": 0,
         "category": "Basic",
-        "time": "Sabah",
-        "tag":"su",
-        "n_title": [
-          "Su içmek faydalı",
-          "Su iç"
-        ],
-        "n_body": [
-          "Su içmek body",
-          "Su iç body"
-        ]
+        "time": "noon",
+        "image": "Sabah",
+        "tag":"elma",
+        "n_title": "Selam, bir tavsiyem var 👩🏻‍⚕️",
+        "n_body": "Bir elma bağışıklığı güçlendirir. Detaylı bilgi için tıkla... "
 
     },
     {
         "id": 2,
-        "title": "Su dududu",
-        "description": "Uyku sırasında susuz kalan vücudunuz için sabahları her şeyden önce içilmesi gereken bir numaralı içeceğimiz su. Sabah uyandığınızda metabolizmanızın sağlıklı bir şekilde yükselmesi için ve organlarınızın işlevsel bir şekilde çalışmaya devam etmesi için mutlaka bir bardak su için, birkaç dakika midenizdeki rahatlama ve serinliğin tadını çıkarın.",
+        "title": "Muz şişkinliği gideriyor",
+        "description": "Muzun, kasları ve adet kramplarını rahatlatan potasyum zenginliğiyle meşhur olduğunu biliyoruz. İçerdiği prebiyotikler de midedeki şişkinliği azaltıyor.",
         "priority": 0,
         "category": "Basic",
-        "time": "Sabah",
-        "tag":"su",
-        "n_title": [
-          "Su içmek faydalı",
-          "Su iç"
-        ],
-        "n_body": [
-          "Su içmek body",
-          "Su iç body"
-        ]
+        "time": "afternoon",
+        "image": "Sabah",
+        "tag":"muz",
+        "n_title": "Günaydın bir tavsiyem var 👩🏻‍⚕️",
+        "n_body": "Potasyum zengini olan muzu yemelisin. Detaylı bilgi için tıkla... "
 
     },
     {
         "id": 3,
-        "title": "Su dududu",
-        "description": "Uyku sırasında susuz kalan vücudunuz için sabahları her şeyden önce içilmesi gereken bir numaralı içeceğimiz su. Sabah uyandığınızda metabolizmanızın sağlıklı bir şekilde yükselmesi için ve organlarınızın işlevsel bir şekilde çalışmaya devam etmesi için mutlaka bir bardak su için, birkaç dakika midenizdeki rahatlama ve serinliğin tadını çıkarın.",
+        "title": "Yumurta enerji seviyenizi artırır",
+        "description": "Yumurta B12 vitamini ve demir zengini. Bu iki besin maddesi de vücutta enerji seviyesini artırma ve korumada önemli rol oynuyor. Yumurta içindeki yüksek protein sayesinde enerji seviyenizi korurken aynı zamanda uzun süre tok tutuyor.",
         "priority": 0,
         "category": "Basic",
-        "time": "Sabah",
-        "tag":"su",
-        "n_title": [
-          "Su içmek faydalı",
-          "Su iç"
-        ],
-        "n_body": [
-          "Su içmek body",
-          "Su iç body"
-        ]
+        "image": "Sabah",
+        "time": "morning",
+        "tag":"yumurta",
+        "n_title": "Bi hatırlatmam var :)",
+        "n_body":"Sabahları yumurta yemek enerji seviyeni arttır. Detaylı bilgi için tıkla..."
 
     }
  

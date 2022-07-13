@@ -4,7 +4,7 @@
     
     {
         "id": 0,
-        "header": "Basit Seviye Program",
+        "header": "Gündelik Hatırlatmalar",
         "difficulty": "Kolay uygulanabilir",
         "notificationInfo": "Günde 5 hatırlatma",
         "title": "Zinde kal",
@@ -13,19 +13,19 @@
        },
     {
         "id": 1,
-        "header": "Orta Seviye Program",
+        "header": "Unutulan Egzersizler",
         "difficulty": "Rahat uygulanabilir",
-        "notificationInfo": "Günde 8 hatırlatma",
-        "title": "ZayıflaZayıflaZayıflaZayıflaZayıflaZayıflaZayıfla",
+        "notificationInfo": "Günde 3 hatırlatma",
+        "title": "Kolay egzersizler ile vücudunuzu dinç tutun.",
         "category": "medium",
         "image":"mid_program"
        },
     {
         "id": 2,
-        "header": "İleri Seviye Program",
-        "difficulty": "Zor uygulanabilir",
-        "notificationInfo": "Günde 12 hatırlatma",
-        "title": "Extra sağlık",
+        "header": "Sağlıklı Beslenme Tavsiyeleri",
+        "difficulty": "Kolay uygulanabilir",
+        "notificationInfo": "Günde 3 hatırlatma",
+        "title": "Öğünlerinizi sağlıklı olarak düzenleyin. ",
         "category": "hard",
         "image":"hard_program"
        }
